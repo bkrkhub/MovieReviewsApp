@@ -1,0 +1,152 @@
+/* General Styles */
+.movie-carousel-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.movie-poster {
+    height: 300px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-poster > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Proper scaling for images */
+}
+
+.movie-card-container {
+    height: 600px;
+    background-color: black;
+    position: relative;
+}
+
+.movie-card {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), var(--img);
+}
+
+.movie-detail {
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px; /* Space between elements */
+}
+
+.movie-title {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: center; /* Horizontal alignment */
+    text-align: center; /* Center text */
+}
+
+.movie-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin-top: 10px;
+    gap: 20px;
+    position: relative;
+    z-index: 9999; /* Move buttons to the top layer */
+    pointer-events: all; /* Guarantee that buttons are clicked */
+}
+
+.movie-buttons-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.movie-buttons-container.visible{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.play-button-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+.play-button-icon {
+    padding: 0;
+    margin: 0;
+    color: orange;
+    font-size: 5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.play-button-icon:hover {
+    font-size: 7rem;
+    color: red;
+}
+
+.movie-review-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.movie-review-button-container .btn-warning {
+    background-color: #ffc107; /* Default yellow color */
+    color: black; /* Default text color */
+    font-size: large;
+    border: none;
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.movie-review-button-container .btn-warning:hover {
+    background-color: #57d625; /* Hover effect color */
+    color: white; /* Change text to white */
+    transform: scale(1.5); /* Slightly enlarge button */
+    box-shadow: 0px 4px 10px rgba(0, 195, 255, 0.2); /* Soft shadow effect */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 800px) {
+    .movie-detail {
+        flex-direction: column; /* Arrange items vertically */
+        align-items: center; /* Center items */
+        gap: 20px; /* Space between elements */
+        top: auto; /* Dynamic position */
+        padding-top: 20px;
+    }
+
+    .movie-poster {
+        height: 300px; /* Reduce poster height */
+    }
+
+    .movie-title {
+        font-size: 1.2rem; /* Reduce font size */
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .movie-buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Adjust button width */
+        margin-top: 20px;
+    }
+
+    .play-button-icon {
+        font-size: 3rem; /* Adjust icon size */
+    }
+}

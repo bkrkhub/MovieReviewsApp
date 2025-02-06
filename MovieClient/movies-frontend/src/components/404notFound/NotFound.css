@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cont404 {
+    height: 80vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #000;
+}
+
+.cont404 img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.cont404 button {
+    padding: 15px 20px;
+    background-color: #9253ff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cont404 button:hover {
+    background-color:cyan;
+    transform: scale(1.25);
+    color: #000;
+}
